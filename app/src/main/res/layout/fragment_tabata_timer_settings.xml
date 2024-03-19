@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ButtonPlusPreparation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@color/transparentColor"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintBottom_toBottomOf="@id/text_input_layout_preparation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_input_layout_preparation" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_preparation"
+        style="@style/text_input_layout_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        android:hint="@string/preparation"
+        android:textColorHint="@color/black"
+        app:expandedHintEnabled="false"
+        app:hintTextAppearance="@style/HintTextStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonMinusPreparation"
+        app:layout_constraintStart_toEndOf="@id/ButtonPlusPreparation"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.dyplom.presentation.ui.timer.util.MyEditTextView
+            android:id="@+id/edittext_preparation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lines="1"
+            android:text="@string/_0"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/buttonMinusPreparation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        android:background="@color/transparentColor"
+        android:src="@drawable/ic_minus"
+        app:layout_constraintBottom_toBottomOf="@id/text_input_layout_preparation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_input_layout_preparation" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ButtonPlusWork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@color/transparentColor"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintBottom_toBottomOf="@id/text_input_layout_work"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_input_layout_work" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_work"
+        style="@style/text_input_layout_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        android:hint="@string/work"
+        android:textColorHint="@color/black"
+        app:expandedHintEnabled="false"
+        app:hintTextAppearance="@style/HintTextStyle"
+        app:layout_constraintEnd_toStartOf="@id/buttonMinusWork"
+        app:layout_constraintStart_toEndOf="@id/ButtonPlusWork"
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout_preparation">
+
+        <com.example.dyplom.presentation.ui.timer.util.MyEditTextView
+            android:id="@+id/edittext_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lines="1"
+            android:text="@string/_0"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/buttonMinusWork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        android:background="@color/transparentColor"
+        android:src="@drawable/ic_minus"
+        app:layout_constraintBottom_toBottomOf="@id/text_input_layout_work"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_input_layout_work" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ButtonPlusRest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@color/transparentColor"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintBottom_toBottomOf="@id/text_input_layout_rest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_input_layout_rest" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_rest"
+        style="@style/text_input_layout_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        android:hint="@string/rest"
+        android:textColorHint="@color/black"
+        app:expandedHintEnabled="false"
+        app:hintTextAppearance="@style/HintTextStyle"
+        app:layout_constraintEnd_toStartOf="@id/buttonMinusRest"
+        app:layout_constraintStart_toEndOf="@id/ButtonPlusRest"
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout_work">
+
+        <com.example.dyplom.presentation.ui.timer.util.MyEditTextView
+            android:id="@+id/edittext_rest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lines="1"
+            android:text="@string/_0"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/buttonMinusRest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        android:background="@color/transparentColor"
+        android:src="@drawable/ic_minus"
+        app:layout_constraintBottom_toBottomOf="@id/text_input_layout_rest"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_input_layout_rest" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ButtonPlusRounds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@color/transparentColor"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintBottom_toBottomOf="@id/text_input_layout_rounds"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_input_layout_rounds" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_rounds"
+        style="@style/text_input_layout_style"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        android:hint="@string/rounds"
+        android:textColorHint="@color/black"
+        app:expandedHintEnabled="false"
+        app:hintTextAppearance="@style/HintTextStyle"
+        app:layout_constraintEnd_toStartOf="@id/buttonMinusRounds"
+        app:layout_constraintStart_toEndOf="@id/ButtonPlusRounds"
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout_rest">
+
+        <com.example.dyplom.presentation.ui.timer.util.MyEditTextView
+            android:id="@+id/edittext_rounds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:lines="1"
+            android:text="0"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/buttonMinusRounds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        android:background="@color/transparentColor"
+        android:src="@drawable/ic_minus"
+        app:layout_constraintBottom_toBottomOf="@id/text_input_layout_rounds"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_input_layout_rounds" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/black_button_selector"
+        android:text="@string/start"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout_rounds" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

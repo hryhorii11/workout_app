@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.dyplom.presentation.util.InterceptedConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewExerciseInWorkoutItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_border"
+        app:cardCornerRadius="@dimen/cardViewCornerRadius"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_border">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewExerciseImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/contactImageStartMargin"
+                android:layout_marginTop="@dimen/imageViewContactTopMargin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:text="@string/exercise"
+                android:textColor="@color/item_name_dark_grey"
+                android:textSize="@dimen/biggerTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewExerciseImage"
+                app:layout_constraintStart_toEndOf="@id/imageViewExerciseImage"
+                app:layout_constraintTop_toTopOf="@id/imageViewExerciseImage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewOptions"
+                android:layout_width="@dimen/options_image_size"
+                android:layout_height="@dimen/options_image_size"
+                android:layout_marginEnd="@dimen/medium_offset"
+
+                android:src="@drawable/options_ic"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewExerciseImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/imageViewExerciseImage" />
+
+            <TextView
+                android:id="@+id/textViewRestTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:layout_marginTop="@dimen/small_offset"
+                android:text="@string/rest_time"
+                android:textColor="@drawable/black_text_selector"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageViewExerciseImage" />
+
+            <TextView
+                android:id="@+id/textViewSets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="@dimen/small_offset"
+                android:text="@string/sets"
+                android:textColor="@drawable/black_text_selector"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/textViewRestTime"
+                app:layout_constraintTop_toBottomOf="@id/imageViewExerciseImage" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewKg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="@dimen/small_offset"
+                android:text="@string/kg"
+                android:textColor="@drawable/black_text_selector"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/textViewSets"
+                app:layout_constraintTop_toBottomOf="@id/imageViewExerciseImage" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextComment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/add_some_exercise_comments"
+                android:textColor="@color/black"
+                android:textColorHint="@color/item_description_color"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/imageViewExerciseImage"
+                app:layout_constraintTop_toBottomOf="@id/textViewRestTime"
+                app:layout_constraintWidth_percent="0.8" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</com.example.dyplom.presentation.util.InterceptedConstraintLayout>

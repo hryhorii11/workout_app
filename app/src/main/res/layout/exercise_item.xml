@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewExerciseItem"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        android:layout_marginBottom="@dimen/horizontal_margin"
+        android:background="@drawable/item_border"
+        app:cardCornerRadius="@dimen/cardViewCornerRadius">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/item_border">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/viewChecek"
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:visibility="gone"
+
+
+                />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewContactPhoto"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/contactImageStartMargin"
+                android:layout_marginTop="@dimen/imageViewContactTopMargin"
+                android:src="@drawable/baseline_sports_gymnastics_24"
+                app:layout_constraintStart_toEndOf="@id/viewChecek"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewContactName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:layout_marginEnd="@dimen/small_horizontal_margin"
+                android:text="@string/exercise"
+                android:textColor="@color/item_name_dark_grey"
+                android:textSize="@dimen/biggerTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/textViewContactCareer"
+                app:layout_constraintEnd_toStartOf="@id/buttonExerciseInfo"
+                app:layout_constraintStart_toEndOf="@id/imageViewContactPhoto"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewContactCareer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/horizontal_margin"
+                android:text="@string/description"
+                android:textColor="@color/item_description_color"
+                android:textSize="@dimen/smallTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageViewContactPhoto"
+                app:layout_constraintTop_toBottomOf="@+id/textViewContactName" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/buttonExerciseInfo"
+                android:layout_width="@dimen/exerciseInfoButtonSize"
+                android:layout_height="@dimen/exerciseInfoButtonSize"
+                android:layout_marginEnd="@dimen/small_horizontal_margin"
+                android:background="@color/transparentColor"
+                android:src="@drawable/info_ic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.appcompat.widget.LinearLayoutCompat>

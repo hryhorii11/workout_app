@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.dyplom.presentation.util.InterceptedConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchViewExercises"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/search_view_height"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        android:background="@drawable/search_view_background"
+        android:focusableInTouchMode="true"
+        android:hint="@string/search_view_exercise_hint"
+        app:iconifiedByDefault="false"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_equipment"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:text="@string/all_equipment"
+        android:background="@drawable/border_button_selector"
+        android:textColor="@drawable/black_text_selector"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/button_category"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchViewExercises" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_category"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:text="@string/all_categories"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:background="@drawable/border_button_selector"
+        android:textColor="@drawable/black_text_selector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_equipment"
+        app:layout_constraintTop_toBottomOf="@id/searchViewExercises" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_exercise"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_equipment" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonAdd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/add_exercise_button_height"
+        android:text="@string/add"
+        android:textColor="@color/white"
+        android:background="@drawable/black_button_selector"
+        android:layout_marginBottom="@dimen/medium_offset"
+        android:layout_marginStart="@dimen/horizontal_margin"
+        android:layout_marginEnd="@dimen/horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</com.example.dyplom.presentation.util.InterceptedConstraintLayout>

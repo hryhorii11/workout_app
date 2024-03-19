@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/viewPagerFragment">
+
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.dyplom.presentation.ui.mainViewPager.MainViewPagerFragment"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_tabataTimerFragment"
+            app:destination="@id/tabataTimerFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_createWorkoutFragment"
+            app:destination="@id/createWorkoutFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_exploreWorkoutFragment"
+            app:destination="@id/exploreWorkoutFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_workoutDetailFragment"
+            app:destination="@id/workoutDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tabataTimerFragment"
+        android:name="com.example.dyplom.presentation.ui.timer.fragments.TabataTimerFragment"
+        android:label="TabataTimerFragment" >
+        <argument
+            android:name="timeSettings"
+            app:argType="com.example.dyplom.presentation.ui.timer.model.TabataTimeSettings" />
+    </fragment>
+    <fragment
+        android:id="@+id/createWorkoutFragment"
+        android:name="com.example.dyplom.presentation.ui.workouts.createWorkout.CreateWorkoutFragment"
+        android:label="CreateWorkoutFragment" >
+        <action
+            android:id="@+id/action_createWorkoutFragment_to_exercisesListFragment"
+            app:destination="@id/exercisesListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exercisesListFragment"
+        android:name="com.example.dyplom.presentation.ui.excersices.exerciseList.ExercisesListFragment"
+        android:label="ExercisesListFragment" >
+        <action
+            android:id="@+id/action_exercisesListFragment_to_exerciseDetailFragment"
+            app:destination="@id/exerciseDetailFragment" />
+        <argument
+            android:name="isReplacement"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="replacementExercisePosition"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseDetailFragment"
+        android:name="com.example.dyplom.presentation.ui.excersices.exerciseDetailView.ExerciseDetailFragment"
+        android:label="ExerciseDetailFragment" >
+        <argument
+            android:name="exercise"
+            app:argType="com.example.dyplom.data.exercise.model.ExerciseUi" />
+    </fragment>
+    <fragment
+        android:id="@+id/exploreWorkoutFragment"
+        android:name="com.example.dyplom.presentation.ui.workouts.exploreWorkout.ExploreWorkoutFragment"
+        android:label="ExploreWorkoutFragment" >
+        <action
+            android:id="@+id/action_exploreWorkoutFragment_to_workoutDetailFragment"
+            app:destination="@id/workoutDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workoutDetailFragment"
+        android:name="com.example.dyplom.presentation.ui.workouts.workoutDetail.WorkoutDetailFragment"
+        android:label="WorkoutDetailFragment" >
+        <argument
+            android:name="workoutid"
+            app:argType="string" />
+        <argument
+            android:name="workoutName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_workoutDetailFragment_to_exerciseDetailFragment"
+            app:destination="@id/exerciseDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.dyplom.presentation.ui.auth.registration.SignUpFragment"
+        android:label="RegistrationFragment" />
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.dyplom.presentation.ui.auth.login.SignInFragment"
+        android:label="SignInFragment" >
+        <action
+            android:id="@+id/action_signInFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
+    </fragment>
+</navigation>

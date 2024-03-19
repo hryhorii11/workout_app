@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "770503879755",
+    "project_id": "fitness-app-f9aed",
+    "storage_bucket": "fitness-app-f9aed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770503879755:android:4e3a8abeba5bc9e774f1ce",
+        "android_client_info": {
+          "package_name": "com.example.dyplom"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwfvqPW3-4PoILONXRO64yIa90veHLJR8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
